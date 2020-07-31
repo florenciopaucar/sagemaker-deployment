@@ -74,7 +74,7 @@ def predict_fn(input_data, model):
 
     # Using data_X and data_len we construct an appropriate input tensor. Remember
     # that our model expects input data of the form 'len, review[500]'.
-    data_pack = np.hstack((data_len, data_X))
+    data_pack = np.hstack((data_len, data_x))
     data_pack = data_pack.reshape(1, -1)
     
     data = torch.from_numpy(data_pack)
